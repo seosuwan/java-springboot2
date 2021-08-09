@@ -18,7 +18,7 @@ class ArrayDemoTest {
         arrayDemo = new ArrayDemo();
     }
     @Test
-    void fill() {
+    void test_fill() {
         String s = "";
         int[] arr = arrayDemo.fill(7);
         for(int i: arr){
@@ -27,7 +27,7 @@ class ArrayDemoTest {
         assertEquals("77777",s);
     }
     @Test
-    void copy() {
+    void test_copy() {
         String s = "";
         int[] t = new int[5];
         int[] arr = arrayDemo.copy(new int[]{7,7,7,7,7},0,2,2);
@@ -35,5 +35,9 @@ class ArrayDemoTest {
             s += i;
         }
         assertEquals("00770",s);
+    }
+    @Test
+    void test_createIntegerArray(){
+        int[] arr = arrayDemo.createIntegerArray(1,6);
     }
 }
