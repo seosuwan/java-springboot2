@@ -37,7 +37,12 @@ class ArrayDemoTest {
         assertEquals("00770",s);
     }
     @Test
-    void test_createIntegerArray(){
-        int[] arr = arrayDemo.createIntegerArray(1,6);
+    void test_createIntegerArray() {
+        String s = "";
+        int[] arr = arrayDemo.createIntegerArray(1,5);
+        for(int i: arr){
+            s += i;
+        }
+        assertEquals("12345",s);
     }
 }
